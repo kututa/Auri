@@ -1,0 +1,11 @@
+@import "tailwindcss";
+/* Global link reset to match design */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	color: #4b5563; /* Tailwind gray-600 equivalent */
+}
+
