@@ -9,3 +9,89 @@ a:hover {
 	color: #4b5563; /* Tailwind gray-600 equivalent */
 }
 
+/* AURI logo styling */
+.logo-auri {
+	font-family: AKONY, sans-serif;
+	font-weight: 700;
+	font-style: Bold;
+	font-size: 32px;
+		line-height: 100%;
+		/* leading-trim is experimental and not widely supported; omitted for compatibility */
+	letter-spacing: 0%;
+		background: linear-gradient(90deg, #000000 0%, #0A4588 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+}
+
+/* end of header section  */
+
+/* Hero heading adjustments */
+.hero-title,
+.hero-heading {
+  font-size: 96px;
+  line-height: 0.95;
+  font-weight: 800;
+  color: #000;
+  margin: 0;
+}
+
+/* precise hero layout helpers */
+.hero-left-block {
+  top: 18%;
+  left: 6%;
+  position: absolute;
+  max-width: 680px;
+  z-index: 40; /* above the union shape */
+}
+
+/* Union wrapper and image */
+.union-wrap {
+  position: absolute;
+  z-index: 10; /* behind the left text */
+}
+.union-image {
+  object-fit: contain; /* keep full SVG proportions */
+}
+
+/* Bottom-right text */
+.bottom-right-text {
+  position: absolute;
+  text-align: right;
+  z-index: 50;
+}
+
+/* Custom vertical gradient line */
+.vertical-gradient {
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #dd1816 50%,
+    #1178ee 100%
+  );
+  width: 8px;
+  border-radius: 4px;
+}
+
+/* Full-bleed hero */
+html,
+body,
+#__next {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+/* Persistent footer scope to avoid page-level overrides */
+.site-footer {
+  isolation: isolate; /* prevent blending with page layers */
+  background-color: #ffffff; /* explicit background so pages with transparent bg don't show through */
+  z-index: 50; /* sit above common page background elements */
+}
+
+/* footer inner container guard - use specific selectors to make it harder to override */
+.site-footer > .max-w-6xl {
+  padding-left: 1.5rem; /* match existing px-6 */
+  padding-right: 1.5rem;
+}
