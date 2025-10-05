@@ -66,7 +66,7 @@ export default function Subscribe() {
         {/* Subscribe button (large pill) */}
         <button
           type="submit"
-          className="mt-6 w-[520px] md:w-[720px] max-w-full h-24 bg-gray-200 rounded-full flex items-center justify-center text-2xl font-medium text-gray-500"
+          className="mt-6 w-[320px] sm:w-[420px] md:w-[520px] max-w-full h-16 bg-gray-200 rounded-full flex items-center justify-center text-2xl font-medium text-gray-500"
         >
           Subscribe
         </button>
